@@ -1,0 +1,15 @@
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+    
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - run: pm2 restart flask-app
+    - run: echo "restarted PM2 "
