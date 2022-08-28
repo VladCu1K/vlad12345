@@ -1,5 +1,5 @@
 
-name: CI
+name: pm2-restart
 
 # Controls when the workflow will run
 on:
@@ -11,5 +11,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - run: pm2 restart flask-app
-    - run: echo "restarted PM2 "
+    - name: restart-pm2
+      run: pm2 restart flask-app
+    - name: echo-on-ec2
+      run: echo " Hello WORLD"
