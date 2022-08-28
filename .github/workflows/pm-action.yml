@@ -8,10 +8,10 @@ on:
     branches: [ "main" ]
     
 jobs:
-  build:
+  pm2-restart-workflow:
     runs-on: self-hosted
     steps:
-    - name: restart-pm2
-      run: pm2 restart flask-app
-    - name: echo-on-ec2
-      run: echo " Hello WORLD"
+      - name: restart-pm2
+      - run: pm2 restart flask-app
+      - name: echo-on-ec2
+      - run: echo "Hello WORLD"
