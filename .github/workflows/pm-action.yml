@@ -19,4 +19,5 @@ jobs:
         run: ls -lart
 
       - name: clone changes
+        working-directory: /var/www/vlad12345
         run: git pull
