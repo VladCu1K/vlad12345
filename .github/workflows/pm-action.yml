@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: moving to working directory
         run: cd /var/www/vlad12345
+      - name: checking git repository
+        run: ls -lart
 
       - name: clone changes
         run: git pull
