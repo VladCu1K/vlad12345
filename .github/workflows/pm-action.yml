@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: moving to working directory
         run: cd /var/www/vlad12345
+      - name: checking working dir
+        run: pwd
       - name: checking git repository
         run: ls -lart
 
